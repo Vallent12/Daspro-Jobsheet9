@@ -5,7 +5,7 @@ public class SearchNilai03 {
         Scanner sc = new Scanner(System.in);
         int[] arrNilai;
         int key, n;
-        int hasil = 0;
+        int hasil = -1;
 
         System.out.print("Masukkan banyaknya nilai yang akan diinput: ");
         n = sc.nextInt();
@@ -28,7 +28,13 @@ public class SearchNilai03 {
         }
 
         System.out.println();
-        System.out.println("Nilai " + key + " ketemu, merupakan nilai mahasiswa ke-" + hasil);
+
+        if (hasil != -1) {
+            System.out.println("Nilai " + key + " ketemu, merupakan nilai mahasiswa ke-" + hasil);
+        } else {
+            System.out.println("Nilai yang dicari tidak ditemukan");
+        }
+
         System.out.println();
     }
 }
